@@ -1,4 +1,4 @@
-aback
+arose
 abase
 abate
 abbey
@@ -106,7 +106,7 @@ argue
 arise
 armor
 aroma
-arose
+aback
 array
 arrow
 arson

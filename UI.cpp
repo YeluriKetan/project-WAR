@@ -18,8 +18,16 @@ void showInvalidInputError() {
 }
 
 void showFileErrorAndExit() {
-    cerr << "Unable to open file\n";
+    showError("Unable to open file");
+}
+
+void showError(string input) {
+    cerr << input << "\n";
     exit(EXIT_FAILURE);
+}
+
+void printPrediction(string prediction) {
+    cout << prediction << "\n";
 }
 
 void close() {

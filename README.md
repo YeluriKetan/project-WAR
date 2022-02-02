@@ -24,4 +24,4 @@ Coming soon
 
 [Yeluri Ketan](https://github.com/YeluriKetan) - Undergraduate, Computer Science, NUS '24
 
-[Avinash Changrani](https://github.com/nabobery) - Undergraduate, IIITDM Kancheepuram '24
+[Avinash Changrani](https://github.com/nabobery) - Undergraduate, Computer Science, IIITDM Kancheepuram '24

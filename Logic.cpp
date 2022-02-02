@@ -10,8 +10,10 @@ Logic::Logic() {
         showFileErrorAndExit();
     }
     string currString;
+    int count = 0;
     while (file >> currString) {
         WORDS.push_back(currString);
+        currState.push_back(count++);
     }
 }
 
@@ -31,3 +33,66 @@ bool Logic::isValidInput(string input) {
     return true;
 }
 
+bool Logic::isDone(string input) {
+    return DONE == input;
+}
+
+bool matches(string word, string prevPrediction, string predicate) {
+    for (int i = 0; i < 5; ++i) {
+        if (predicate[i] != 'G') { // if not G, continue
+            continue;
+        }
+        if (prevPrediction[i] != word[i]) { // if G, letter has to match
+            return false; // else false
+        }
+        word[i] = 0; // replace with blank
+    }
+    for (int i = 0; i < 5; ++i) {
+        if (predicate[i] != 'Y') { // if not Y, continue
+            continue;
+        }
+        char currLetter = word[i];
+        word[i] = 0;
+        if (word.find(prevPrediction[i]) == string::npos) { // if it exists anywhere, its ok
+            return false;
+        }
+        word[i] = currLetter;
+    }
+    for (int i = 0; i < 5; ++i) {
+        if (predicate[i] != 'B') { // if not B, continue
+            continue;
+        }
+        char currLetter = prevPrediction[i];
+        int count = 0;
+        for (char curr: prevPrediction) {
+            if (curr == currLetter) {
+                count++;
+            }
+        }
+        if (count > 1) {
+            continue;
+        }
+        if (word.find(currLetter) != string::npos) { // if B, letter shouldnt exist
+            return false; // else false
+        }
+    }
+    return true;
+}
+
+void Logic::filter(string prevPrediction, string predicate) {
+    vector<int> nextState;
+    for (int i = currState.size() - 1; i > 0; --i) {
+        if (matches(WORDS[currState[i]], prevPrediction, predicate)) { // filtering
+            nextState.push_back(currState[i]);
+        }
+    }
+    currState = nextState;
+}
+
+string Logic::predict() {
+    if (currState.empty()) {
+        return "";
+    } else {
+        return WORDS[currState[0]];
+    }
+}
