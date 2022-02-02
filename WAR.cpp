@@ -1,5 +1,5 @@
-#include "Logic.h"
-#include "UI.h"
+#include "logic/Logic.h"
+#include "ui/UI.h"
 #include "string"
 
 using namespace std;

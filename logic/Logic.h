@@ -2,12 +2,12 @@
 #define PROJECTWAR_LOGIC_H
 #include "string"
 #include "vector"
-#include "UI.h"
+#include "ui/UI.h"
 
 using namespace std;
 
 class Logic {
-    string FILE_NAME = "../words.txt";
+    string FILE_NAME = "../lib/words.txt";
     string EXIT = "q";
     string DONE = "GGGGG";
     vector<string> WORDS;
