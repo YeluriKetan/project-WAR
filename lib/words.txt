@@ -1,3 +1,10 @@
+slate
+bingo
+mucky
+crane
+zonal
+skier
+mound
 arose
 abase
 abate
@@ -196,7 +203,6 @@ bigot
 bilge
 billy
 binge
-bingo
 biome
 birch
 birth
@@ -456,7 +462,6 @@ coyly
 crack
 craft
 cramp
-crane
 crank
 crash
 crass
@@ -1261,7 +1266,6 @@ motif
 motor
 motto
 moult
-mound
 mount
 mourn
 mouse
@@ -1269,7 +1273,6 @@ mouth
 mover
 movie
 mower
-mucky
 mucus
 muddy
 mulch
@@ -1762,7 +1765,6 @@ sissy
 sixth
 sixty
 skate
-skier
 skiff
 skill
 skimp
@@ -1775,7 +1777,6 @@ slain
 slang
 slant
 slash
-slate
 slave
 sleek
 sleep
@@ -2312,4 +2313,3 @@ young
 youth
 zebra
 zesty
-zonal

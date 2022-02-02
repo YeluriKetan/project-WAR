@@ -10,15 +10,16 @@ class Logic {
     string FILE_NAME = "../lib/words.txt";
     string EXIT = "q";
     string DONE = "GGGGG";
-    vector<string> WORDS;
     vector<int> currState;
 
 public:
+    vector<string> WORDS;
     Logic();
     bool isExit(string input);
     bool isValidInput(string input);
     bool isDone(string input);
     void filter(string prevPrediction, string predicate);
+    void reset();
     string predict();
 };
 

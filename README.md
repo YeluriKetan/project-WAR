@@ -1,4 +1,4 @@
-# Project TREADS
+# Project WAR
 
 **WAR** stands for **W**ordle **A**nswer and **R**esolver
 

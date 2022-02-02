@@ -89,6 +89,13 @@ void Logic::filter(string prevPrediction, string predicate) {
     currState = nextState;
 }
 
+void Logic::reset() {
+    currState.clear();
+    for (int i = 0; i < 2315; ++i) {
+        currState.push_back(i);
+    }
+}
+
 string Logic::predict() {
     if (currState.empty()) {
         return "";
