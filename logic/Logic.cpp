@@ -77,7 +77,7 @@ bool matches(string word, string prevPrediction, string predicate) {
 
 void Logic::filter(string prevPrediction, string predicate) {
     vector<int> nextState;
-    for (int i = currState.size() - 1; i > 0; --i) {
+    for (int i = 1; i < currState.size(); ++i) {
         if (matches(WORDS[currState[i]], prevPrediction, predicate)) { // filtering
             nextState.push_back(currState[i]);
         }
