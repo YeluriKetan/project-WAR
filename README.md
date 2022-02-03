@@ -10,10 +10,10 @@ We have built a solver from scratch that makes use of logic based on the rules o
 
 ## Stats
 
-- Time taken to build: 5 hours
-- Average no. of predictions required: 3.82462
+- Time taken to build: 6 hours
+- Average no. of predictions required: 3.79698
 - Average time taken to solve: < 200 microseconds
-- No. of words failed (i.e. take more than 6 predictions): 8
+- No. of words failed (i.e. take more than 6 predictions): 15
 
 ![Distribution](lib/Distribution.png)
 

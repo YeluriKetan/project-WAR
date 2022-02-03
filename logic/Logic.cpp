@@ -106,10 +106,10 @@ string Logic::predict() {
                 return "salet";
             case 1:
                 numOfPredictions++;
-                return "owing";
+                return "crump";
             case 2:
                 numOfPredictions++;
-                return "crump";
+                return "owing";
             default:
                 numOfPredictions++;
                 return WORDS[currState[0]];
