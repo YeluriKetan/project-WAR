@@ -98,7 +98,7 @@ string Logic::predict() {
     if (currState.empty()) {
         return "";
     } else if (currState.size() < 11) {
-        return WORDS[currState[0]];
+        return WORDS[currState[currState.size() / 2]];
     } else {
         switch (numOfPredictions) {
             case 0:
@@ -106,13 +106,13 @@ string Logic::predict() {
                 return "salet";
             case 1:
                 numOfPredictions++;
-                return "crump";
+                return "corni";
             case 2:
                 numOfPredictions++;
-                return "owing";
+                return "dumpy";
             default:
                 numOfPredictions++;
-                return WORDS[currState[0]];
+                return WORDS[currState[currState.size() / 2]];
         }
     }
 }
