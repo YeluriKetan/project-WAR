@@ -6,11 +6,14 @@
 
 > [Wordle](https://www.powerlanguage.co.uk/wordle/) is a web-based word game developed by Welsh-born software engineer Josh Wardle, formerly an employee of Reddit. Players attempt to guess a five-letter word in six attempts; feedback, in the form of colored tiles, is given for each guess, informing players which letters are in the correct position and which are in other positions of the answer word. [(source)](https://en.wikipedia.org/wiki/Wordle)
 
+We have built a solver from scratch that makes use of logic based on the rules of the game, a simple algorithm and a couple of primitive data structures to solve Wordle. There's no search or decision trees, learning models or intelligent agents; just plain old DSA. The algo has still managed to reach avg. levels of predictions that are less than 0.45 away from the [best known automated solver](https://jonathanolson.net/wordle-solver/).
+
 ## Stats
 
 - Time taken to build: 5 hours
-- Average no. of predictions required: 4.02
-- Average time taken to solve: 200 microseconds
+- Average no. of predictions required: 3.87
+- Average time taken to solve: < 200 microseconds
+- No. of words failed (i.e. take more than 6 predictions): 28
 
 ![Distribution](lib/Distribution.png)
 

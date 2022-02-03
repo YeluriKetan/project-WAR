@@ -51,28 +51,24 @@ bool matches(string word, string prevPrediction, string predicate) {
         if (predicate[i] != 'Y') { // if not Y, continue
             continue;
         }
-        char currLetter = word[i];
-        word[i] = 0;
-        if (word.find(prevPrediction[i]) == string::npos) { // if it exists anywhere, its ok
+        if (word[i] == prevPrediction[i]) {
             return false;
         }
-        word[i] = currLetter;
+        int pos = word.find(prevPrediction[i]);
+        if (pos == string::npos) { // if it exists anywhere, its ok
+            return false;
+        } else {
+            if (predicate[pos] == 'B' && prevPrediction[pos] == prevPrediction[i]) {
+                return false;
+            }
+            word[pos] = 0;
+        }
     }
     for (int i = 0; i < 5; ++i) {
         if (predicate[i] != 'B') { // if not B, continue
             continue;
         }
-        char currLetter = prevPrediction[i];
-        int count = 0;
-        for (char curr: prevPrediction) {
-            if (curr == currLetter) {
-                count++;
-            }
-        }
-        if (count > 1) {
-            continue;
-        }
-        if (word.find(currLetter) != string::npos) { // if B, letter shouldnt exist
+        if (word.find(prevPrediction[i]) != string::npos) { // if B, letter shouldn't exist
             return false; // else false
         }
     }
