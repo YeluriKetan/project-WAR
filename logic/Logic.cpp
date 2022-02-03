@@ -15,6 +15,7 @@ Logic::Logic() {
         WORDS.push_back(currString);
         currState.push_back(count++);
     }
+    numOfPredictions = 0;
 }
 
 bool Logic::isExit(string input) {
@@ -77,7 +78,7 @@ bool matches(string word, string prevPrediction, string predicate) {
 
 void Logic::filter(string prevPrediction, string predicate) {
     vector<int> nextState;
-    for (int i = 1; i < currState.size(); ++i) {
+    for (int i = 0; i < currState.size(); ++i) {
         if (matches(WORDS[currState[i]], prevPrediction, predicate)) { // filtering
             nextState.push_back(currState[i]);
         }
@@ -90,12 +91,28 @@ void Logic::reset() {
     for (int i = 0; i < 2315; ++i) {
         currState.push_back(i);
     }
+    numOfPredictions = 0;
 }
 
 string Logic::predict() {
     if (currState.empty()) {
         return "";
-    } else {
+    } else if (currState.size() < 11) {
         return WORDS[currState[0]];
+    } else {
+        switch (numOfPredictions) {
+            case 0:
+                numOfPredictions++;
+                return "salet";
+            case 1:
+                numOfPredictions++;
+                return "owing";
+            case 2:
+                numOfPredictions++;
+                return "crump";
+            default:
+                numOfPredictions++;
+                return WORDS[currState[0]];
+        }
     }
 }

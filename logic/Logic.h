@@ -11,6 +11,7 @@ class Logic {
     string EXIT = "q";
     string DONE = "GGGGG";
     vector<int> currState;
+    int numOfPredictions;
 
 public:
     vector<string> WORDS;
